@@ -85,12 +85,6 @@ prevBtn.addEventListener('click', function() {
 
 // show random person
 randomBtn.addEventListener('click', function() {
-  currentItem = getRandomNumber();
-  console.log(currentItem);
+  currentItem = Math.floor(Math.random() * reviews.length)
   showPerson();
 });
-
-// get random number bewteen 0 and reviews length
-function getRandomNumber() {
-  return Math.floor(Math.random() * reviews.length);
-}
