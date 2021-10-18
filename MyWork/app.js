@@ -73,6 +73,7 @@ nextBtn.addEventListener('click', function() {
   }
   showPerson();
 });
+
 // show previous person
 prevBtn.addEventListener('click', function() {
   currentItem--;
@@ -81,3 +82,15 @@ prevBtn.addEventListener('click', function() {
   }
   showPerson();
 });
+
+// show random person
+randomBtn.addEventListener('click', function() {
+  currentItem = getRandomNumber();
+  console.log(currentItem);
+  showPerson();
+});
+
+// get random number bewteen 0 and reviews length
+function getRandomNumber() {
+  return Math.floor(Math.random() * reviews.length);
+}
